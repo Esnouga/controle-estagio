@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<title>Listar usu�rios</title>
+<head>
+</head>
+<body>
+
+	<h1>Gerenciar usuarios</h1>
+
+	<form method="POST" th:object="${usuarios}"
+		th:action="@{/usuarios/novo}">
+
+		<div><div>
+				<input type="hidden" th:field="*{codigo}" />
+			</div>
+			<div>
+				<label>Nome do usuário</label>
+				<input type="text" th:field="*{nome}" />
+			</div>
+			<div>
+				<label>Idade do usuário</label>
+				<input type="number" th:field="*{idade}" />
+			</div>
+			<div>
+				<label>E-mail do usuário</label>
+				<input type="email" th:field="*{email}" />
+			</div>
+			
+			<button type="submit">Salvar</button>
+		</div>
+
+
+	</form>
+
+</body>
+</html>
